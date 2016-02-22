@@ -6,7 +6,6 @@ for i in matrix:
     print(i)
 print("\n")
 
-
 rows=len(matrix)
 columns=len(matrix[0])
 
@@ -23,10 +22,8 @@ for i in testmatrix:
     print(i)            
 
 p=0
-
 for i in range(rows):
     for j in range(columns):
         if testmatrix[i][j]>p:
             p=testmatrix[i][j]
-
 print("The maximum size square sub-matrix with all 1s is {}".format(p))
