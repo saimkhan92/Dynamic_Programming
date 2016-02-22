@@ -13,7 +13,7 @@ columns=len(matrix[0])
 for i in range(rows):
     for j in range(columns):
         if i==0 or j==0:
-            testmatrix[i][j]=0
+            testmatrix[i][j]=matrix[i][j]
         elif matrix[i][j]==0:
             testmatrix[i][j]=0
         else:
@@ -21,3 +21,12 @@ for i in range(rows):
 
 for i in testmatrix:
     print(i)            
+
+p=0
+
+for i in range(rows):
+    for j in range(columns):
+        if testmatrix[i][j]>p:
+            p=testmatrix[i][j]
+
+print("The maximum size square sub-matrix with all 1s is {}".format(p))
